@@ -10,7 +10,10 @@ class HomePage extends StatelessWidget {
     return Column(
       mainAxisSize: MainAxisSize.min,
       children: [
-        Image.asset('assets/images/quiz-logo.png', width: 300, height: 300),
+        Image.asset(
+          'assets/images/quiz-logo.png', width: 300, height: 300,
+          color: const Color.fromARGB(145, 255, 255, 255),
+        ),
         const SizedBox(height: 80),
         const Text(
           'Learn Flutter the fun way!',
