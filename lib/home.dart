@@ -11,19 +11,26 @@ class HomePage extends StatelessWidget {
       mainAxisSize: MainAxisSize.min,
       children: [
         Image.asset('assets/images/quiz-logo.png', width: 300, height: 300),
-        const SizedBox(height: 30),
+        const SizedBox(height: 80),
         const Text(
           'Learn Flutter the fun way!',
-          style: TextStyle(fontSize: 20, color: Colors.white),
+          style: TextStyle(fontSize: 24, color: Colors.white),
         ),
         const SizedBox(height: 30),
-        OutlinedButton(
-            onPressed: () {},
+        OutlinedButton.icon(
+            onPressed: () {
+              Navigator.pushNamed(context, '/quiz');
+            },
             style: ButtonStyle(
                 backgroundColor: MaterialStateProperty.all(Colors.transparent),
                 padding: MaterialStateProperty.all(
                     const EdgeInsets.symmetric(horizontal: 20, vertical: 10))),
-            child: const Text(
+            icon: const Icon(
+              Icons.arrow_right_alt,
+              color: Colors.white,
+              size: 25,
+            ),
+            label: const Text(
               'Start Quiz',
               style: TextStyle(fontSize: 18, color: Colors.white),
             ))
