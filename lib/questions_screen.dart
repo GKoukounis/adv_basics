@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:adv_basics/data/questions.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class QuestionsScreen extends StatefulWidget {
   const QuestionsScreen({Key? key}) : super(key: key);
@@ -10,15 +11,14 @@ class QuestionsScreen extends StatefulWidget {
 
 class _QuestionsScreenState extends State<QuestionsScreen> {
   var currentQuestionIndex = 0;
-  
+
   void answerQuestion() {
     setState(() {
       currentQuestionIndex += 1;
     });
   }
-  
-  final void Function() onTap = () {
-  };
+
+  final void Function() onTap = () {};
 
   @override
   Widget build(BuildContext context) {
@@ -34,7 +34,11 @@ class _QuestionsScreenState extends State<QuestionsScreen> {
           children: [
             Text(
               currentQuestion.question,
-              style: const TextStyle(fontSize: 18, color: Colors.white),
+              style: GoogleFonts.lato(
+                color: const Color.fromRGBO(188, 114, 249, 1),
+                fontSize: 24,
+                fontWeight: FontWeight.bold
+              ),
               textAlign: TextAlign.center,
             ),
             const SizedBox(height: 40),
@@ -71,7 +75,7 @@ class QuestionButton extends StatelessWidget {
               shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(10.0),
               )),
-          child: Text(answerText)),
+          child: Text(answerText, textAlign: TextAlign.center,)),
     );
   }
 }
