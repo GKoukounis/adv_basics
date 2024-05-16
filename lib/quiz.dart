@@ -1,5 +1,6 @@
 import 'package:adv_basics/data/questions.dart';
 import 'package:adv_basics/questions_screen.dart';
+import 'package:adv_basics/results_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:adv_basics/home.dart';
 
@@ -27,10 +28,11 @@ class _QuizState extends State<Quiz> {
       selectedAnswers.clear();
       setState(() {
         selectedAnswers = [];
-        activeScreen = HomePage(switchScreen);
+        activeScreen = const ResultScreen();
       });
     }
   }
+  
   
   /*void checkAnswers() {
     setState(() {
