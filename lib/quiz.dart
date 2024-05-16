@@ -27,8 +27,8 @@ class _QuizState extends State<Quiz> {
     if (selectedAnswers.length == questions.length) {
       selectedAnswers.clear();
       setState(() {
+        activeScreen = ResultScreen(chosenAnswer: selectedAnswers,);
         selectedAnswers = [];
-        activeScreen = const ResultScreen();
       });
     }
   }
