@@ -25,10 +25,8 @@ class _QuizState extends State<Quiz> {
     setState(() => selectedAnswers.add(answer));
     
     if (selectedAnswers.length == questions.length) {
-      selectedAnswers.clear();
       setState(() {
         activeScreen = ResultScreen(chosenAnswer: selectedAnswers,);
-        selectedAnswers = [];
       });
     }
   }
